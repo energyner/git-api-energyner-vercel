@@ -5,7 +5,7 @@
   "type": "module",
   "main": "api/energyServ.mjs",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
