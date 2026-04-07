@@ -1,9 +1,12 @@
 {
-  "version": 2,
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/energyServ.mjs"
+      "source": "/api/:path*",
+      "destination": "/api/energyServer.mjs"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ]
 }
