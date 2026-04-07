@@ -1,0 +1,1 @@
+This is the folder for the `git-api-energyner-vercel` repository—which was explained and practiced in the Guide, Book 7, Chapter 5, under the name `git-api-energyner`—and which has been adapted for this exercise to enable its deployment on the Vercel platform.

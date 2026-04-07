@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicom.png" type="image/png">
+      
+    <title>Class 7 – Programming APIs </title>
+     <!--Aplicando estilo a una estructura responsivo de tres columnas -->
+ <link rel="stylesheet" href="./assets/css/style.css" type="text/css"  >
+ <!--LINKS Y SCRIPTS PARA CONVDERTIR LA APICACION EN APPs-->
+<link rel="manifest" href="./manifest.json">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="apple-mobile-web-app-title" content="Git-Api-Energyner">
+ <!-- <link rel="apple-touch-icon" href="./assets/img/logo2400x400.png"> -->
+  <!--FIN DE LOS LINKS Y SCRIPTS PARA CONVERTIR LA APICACION EN UNA APPs-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="robots" content="index">
+<meta name="author" content="René F. Ruano">
+<link rel="canonical" href="https://git-api-energyner-vercel/src/client/index.html">
+
+
+</head>
+<body>
+<header>
+<a href="https://energyner.net/jscript/index.html" target="_blank">
+    <div class="logo">
+        <img src="./assets/img/logggo.png" alt="Energyner">
+    </div>
+</a>
+   
+<h3> Class 7. Part Seven – APIs </h3>
+<p>The scripts and exercises can be found in Book 7: Part Seven — Programming Step-by-Step and More, available for purchase on Amazon.</p>
+<p>Books 1, 2, 3, 4, 5, 6, and 7 of the "Programming Step by Step and More series" are available for sale on Amazon.</p>
+</header>
+<!--3 Divisiones responsives-->
+<div class="wrapper"> 
+    <div class="column"> <!-- Primera división -->
+<!--API Energy Consumption-->
+<h3 class="subcapitulo1"> Energy Consumption API</h3>
+<!--Energy Consumption API-->
+<form id="consumo-form">
+<label for="potencia">Power (kW):</label>
+<input type="number" id="potencia" name="potencia" placeholder="Power" required>
+<label for="horas">Hours (h):</label>
+<input type="number" id="horas" name="horas" placeholder="Hours" required>
+<button type="submit">Calculate</button>
+</form>
+
+<h4> Energy Consumption Result (kWh):</h4>
+<p id="resultadoConsumo"></p>
+
+ <h3 class="subcapitulo1"> Solar Production API</h3>
+<!--Solar Production API-->
+<form id="produccion-form">
+<label for="area">Area: m²</label>
+<input type="number" id="area" name="area" placeholder="Area" required>
+<label for="irradiacion">Irradiance: kW/h-m²</label>
+<input type="number" id="irradiacion" name="irradiacion" placeholder="Irradiance" required>
+<label for="eficiencia">Efficiency: (0 to 1)</label>
+<input type="number" id="eficiencia" name="eficiencia" placeholder="Efficiency" step="0.01" required>
+<button type="submit">Calculate</button>
+</form>
+
+<h4> Solar Production Result, kWh:</h4>
+<p id="resultadoSolar"></p>
+
+</div>
+
+    <div class="column"> <!-- Segunda división -->
+     <h3 class="subcapitulo1"> Carbon Footprint API</h3>
+    <p><b>Consumption and Monthly Report</b></p>
+        <!--API Carbon Footprint-->
+        <form id="formulario">
+            <label>Estado:</label>
+            <select id="state">
+            <option value="Select your State">Select your State</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+
+            </select>
+            <label>Electricidad (kWh):</label>
+            <input type="number" id="elect" placeholder="kWh">
+            <label>Gas (galones):</label>
+            <input type="number" id="gas" placeholder="gal">
+            <label>Agua (pies cúbicos):</label>
+            <input type="number" id="water" placeholder="cubic foots">
+            <label>LPG (galones):</label>
+            <input type="number" id="lpg" placeholder="gal">
+            <label>Gas Natural (pies cúbicos):</label>
+            <input type="number" id="gn" placeholder="cubic foots">
+            <label>Distancia de vuelo (millas):</label>
+            <input type="number" id="fly" placeholder="miles">
+            <label>Costos operativos (USD):</label>
+            <input type="number" id="cogs" placeholder="USD">
+            <label>Número de personas:</label>
+            <input type="number" id="person" placeholder="Number">
+            <p>Calculate</p>
+            <button id="calcular">Send</button>
+        </form>
+        
+        <div >
+            <label>Total Result, CO2:</label>
+            <input id="resultado" readonly>
+            <label>State:</label>
+            <input id="estado" readonly>
+            <label>Footprint Per Capita:</label>
+            <input id="percapita" readonly>
+            <label>Footprint/pc State:</label>
+            <input id="per_capita_estado" readonly>
+            <label>Average/pc USA:</label>
+            <input id="promedioUSA" readonly>
+            <label>Average/pc World:</label>
+            <input id="promedioMundial" readonly>
+            <label>Percentage/pc State:</label>
+            <input id="porcentajeEstado" readonly>
+            <label>Percentage/pc USA:</label>
+            <input id="porcentajeUSA" readonly>
+            <label>Percentage/pc World:</label>
+            <input id="porcentajeMundial" readonly>
+    </div>
+    
+ </div>
+
+    <div class="column"> <!-- Tercera división -->
+        <!--PRIMER CALCULADOR--> 
+          <!--API Calories Burned While Walking. Health & Wellness-->      
+         <h3 class="subcapitulo1">
+           Calories Burned While Walking. Health & Wellness API</h3>
+        <p> <b>
+            Algorithm to determine calorie expenditure for a person while walking or running.
+        </b></p>
+      
+        <p class="articulo1" style="font-size: 12px;"> <b>Lose or gain 1 kilogram of body weight (2.205 lb)</b>, an approximate energy deficit or surplus of 7,000 to 7,700 calories (kcal) ( about 25875 to 30535 btu) is required. 
+        This figure is based on the energy stored in body fat. <br><br>
+        <b>Weight Loss:</b> Creating a deficit of 7,000–7,700 kcal ( about 25875 to 30535 btu) results in a reduction of 1 kg (2.205 lb) of weight . <br><br>
+        <b>Practical Example:</b> If you reduce your daily intake by 500 kcal (1983 btu) , it will take you approximately 14 to 15 days to lose 1 kg (2.205 lb). <br><br>
+        <b>Key Distinction:</b> In the context of nutrition, "calories" typically refers to kilocalories (kcal = 3.96566 btu).
+        </p>
+        
+        <p><b>Calculate</b></p>
+        
+    <form id="caloriasForm">
+          <label for="peso">Weight (lb):</label><br />
+          <input type="number" id="peso" name="peso" required /><br />
+
+          <label for="duracionCaminata">Walking Duration (min):</label>
+          <input
+            type="number"
+            id="duracionCaminata"
+            name="duracionCaminata"
+            required
+          /><br />
+
+          <label for="cantidadPasos">Number of Steps:</label>
+          <input
+            type="number"
+            id="cantidadPasos"
+            name="cantidadPasos"
+            required
+          /><br />
+
+          <label for="metroPaso">Step Length (ft):</label>
+          <input
+            type="number"
+            id="metroPaso"
+            name="metroPaso"
+            step="0.01"
+            required
+          /><br />
+          <br />
+         <button type="submit" class="efectuar">Calculate Calories</button>
+        </form>
+        <div class="articulo1">         
+          <div id="resultado-calories"></div>
+        </div>
+
+   <!--SEGUNDO CALCULADOR-->
+   <!--API Steam Generation --> 
+ <form id="form-generacion-vapor" class="steam-form">
+    <h3 class="subcapitulo1">Steam Generation Calculator API</h3>
+    <h3 class="subcapitulo2">
+    Thermal Energy Generated by Steam
+    </h3>
+    <label for="flujo_vapor">Steam Flow (lb/h)</label>
+    <input type="number" id="flujo_vapor" name="flujo_vapor" step="0.01" required>
+
+    <label for="entalpia">Enthalpy (btu/lb)</label>
+    <input type="number" id="entalpia" name="entalpia" step="0.01" required>
+
+    <label for="eficiencia">Efficiency (0 - 1)</label>
+    <input type="number" id="eficiencia_calorias" name="eficiencia_calorias" step="0.01" value="0.85">
+
+    <button type="submit">Calculate Thermal Energy</button>
+
+    <div id="resultado-vapor" class="resultado"></div>
+</form>
+
+</div>
+
+<!--DIVISION HTML PARA EL LINK-->
+<div id="install-section" style="display:none;">
+    <a href="javascript:void(0)" id="install-button" class="btn-app">
+        Install App - APIs-Energyner
+    </a>
+</div>
+<!--FIN DE LA DIVISION HTML PARA EL LINK-->
+
+
+</div><!--FIN DE LA DIVISION WRAPER-->
+
+<script type="module" src="./assets/js/api-app.js"></script>
+
+<footer>
+    <p>© 2026  APIs. Technical Calculations  – Health & Wellness  </p>
+</footer>
+
+
+<script type="module" src="./nav.mjs"></script>
+</body>
+</html>
