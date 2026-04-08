@@ -71,10 +71,10 @@
 
     <div class="column"> <!-- Segunda división -->
      <h3 class="subcapitulo1"> Carbon Footprint API</h3>
-    <p><b>Consumption and Monthly Report</b></p>
+    <p><b>Consumption and Monthly Report (lbCO2)*</b></p>
         <!--API Carbon Footprint-->
         <form id="formulario">
-            <label>Estado:</label>
+            <label>State:</label>
             <select id="state">
             <option value="Select your State">Select your State</option>
             <option value="AL">Alabama</option>
@@ -129,21 +129,21 @@
             <option value="WY">Wyoming</option>
 
             </select>
-            <label>Electricidad (kWh):</label>
+           <label>Electricity (kWh):</label>
             <input type="number" id="elect" placeholder="kWh">
-            <label>Gas (galones):</label>
+            <label>Gas (gallons):</label>
             <input type="number" id="gas" placeholder="gal">
-            <label>Agua (pies cúbicos):</label>
+            <label>Water (cubic feet):</label>
             <input type="number" id="water" placeholder="cubic foots">
-            <label>LPG (galones):</label>
+            <label>LPG (gallons):</label>
             <input type="number" id="lpg" placeholder="gal">
-            <label>Gas Natural (pies cúbicos):</label>
+            <label>Natural Gas (cubic feet):</label>
             <input type="number" id="gn" placeholder="cubic foots">
-            <label>Distancia de vuelo (millas):</label>
+            <label>Flight distance (miles):</label>
             <input type="number" id="fly" placeholder="miles">
-            <label>Costos operativos (USD):</label>
+            <label>COGS- Operating costs (USD):</label>
             <input type="number" id="cogs" placeholder="USD">
-            <label>Número de personas:</label>
+            <label>Number of people:</label>
             <input type="number" id="person" placeholder="Number">
             <p>Calculate</p>
             <button id="calcular">Send</button>
@@ -169,7 +169,7 @@
             <label>Percentage/pc World:</label>
             <input id="porcentajeMundial" readonly>
     </div>
-    
+    <p style="font-size: 10px; border: 1px solid blue;">*sources EPA / EIA / ICAO / ATAG (2023 - 2024–2025)</p>
  </div>
 
     <div class="column"> <!-- Tercera división -->
